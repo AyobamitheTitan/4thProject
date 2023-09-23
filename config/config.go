@@ -23,6 +23,6 @@ func NewDsn()string{
 		DBPORT: os.Getenv("DBPORT"),
 		SSLMODE: os.Getenv("SSLMODE"),
 	}
-	dsn := fmt.Sprintf("host=%s user=%s port=%s dbname=%s sslmode=%s",config.DBHOST,config.DBUSER,config.DBPORT,config.DBNAME,config.SSLMODE)
+	dsn := fmt.Sprintf("host=%s user=%s password=%s port=%s dbname=%s sslmode=%s",config.DBHOST,config.DBUSER,config.DBPASSWORD,config.DBPORT,config.DBNAME,config.SSLMODE)
 	return dsn
 }
